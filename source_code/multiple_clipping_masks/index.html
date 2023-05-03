@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <meta name="viewport" content="user-scalable=yes, width=300" />
+    <title>Multiple masks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <svg width="300" height="250" viewBox="0 0 300 250">
+        <defs>
+          <clipPath id="mask1">
+            <rect
+              x="66.34"
+              y="17.89"
+              width="191.56"
+              height="59.72"
+              rx="12"
+              ry="12"
+              fill="#4374ff"
+            />
+          </clipPath>
+        </defs>
+        <defs>
+          <clipPath id="mask2">
+            <rect
+              x="33.67"
+              y="141.17"
+              width="191.56"
+              height="59.72"
+              rx="12"
+              ry="12"
+              fill="#606013"
+            />
+          </clipPath>
+        </defs>
+
+        <g id="background">
+          <rect width="300" height="250" fill="#edffb4" />
+        </g>
+        <g id="ball1">
+          <circle cx="33.67" cy="48.04" r="16.88" fill="#37ff1a" />
+        </g>
+        <g id="ball2">
+          <circle cx="268.14" cy="167.49" r="16.88" fill="#ff2760" />
+        </g>
+      </svg>
+      <button id="pause" class="btn">Play</button>
+    </div>
+
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.11.1_min.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
+<!-- Note I need to animate a child group of the group that is actually clipped.  -->
