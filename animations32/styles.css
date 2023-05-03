@@ -29,9 +29,94 @@ h1 {
   visibility: hidden;
 }
 
+#start {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 250px;
+}
+
+.animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 250px;
+}
+
+.animation {
+  z-index: 10;
+}
+
+#city_dark_large_blue {
+  visibility: hidden;
+}
+
 #city_light_large_blue {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 0;
+  visibility: hidden;
+}
+
+#city_dark_small_blue {
+  visibility: hidden;
+}
+
+#city_blue_shield {
+  visibility: hidden;
+}
+
+#city_light_small_blue {
+  visibility: hidden;
+}
+
+#white {
+  visibility: hidden;
+}
+
+#city_stripes {
+  visibility: hidden;
+}
+
+#city_gold_shield_left {
+  visibility: hidden;
+}
+
+#city_gold_shield_right {
+  visibility: hidden;
+}
+
+#city_red {
+  visibility: hidden;
+}
+
+#city_white {
+  visibility: hidden;
+}
+
+#city_m,
+#city_A,
+#city_N,
+#city_C,
+#city_H,
+#city_E,
+#city_S,
+#city_T,
+#city_E2,
+#city_R,
+#city_C2,
+#city_I,
+#city_T2,
+#city_Y,
+#city_1,
+#city_8,
+#city_9,
+#city_4 {
+  visibility: hidden;
+}
+
+#city_light_large_blue {
+  stroke-dasharray: 497;
+  stroke-dashoffset: 497;
 }
 
 #city_ship {

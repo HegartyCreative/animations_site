@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
     <meta name="ad.size" content="width=300,height=250" />
     <meta name="viewport" content="user-scalable=yes, width=300" />
-    <title>Lift Animation</title>
+    <title>Manchester City</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
-      <svg width="300" height="250" viewBox="0 0 300 250">
+      <svg class="animation" width="300" height="250" viewBox="0 0 300 250">
         <defs>
           <clipPath id="myBoatMask">
             <polygon
@@ -20,7 +20,7 @@
           </clipPath>
         </defs>
 
-        <g id="city_dark_large_blue">
+        <g id="city_dark_large_blue" style="z-index: 9999">
           <path
             d="m150,42.5c-45.48,0-82.5,37.01-82.5,82.5s37.01,82.5,82.5,82.5,82.5-37.02,82.5-82.5-37.01-82.5-82.5-82.5"
             fill="#002a5a"
@@ -33,35 +33,11 @@
             fill-rule="evenodd"
           />
         </g>
-        <g id="city_stripes">
+        <g id="white">
+          <circle cx="150" cy="125" r="74.96" fill="#fff" />
           <path
             d="m223.75,125c0-40.73-33.02-73.75-73.75-73.75s-73.75,33.02-73.75,73.75,33.02,73.75,73.75,73.75,73.75-33.01,73.75-73.75"
             fill="#fff"
-          />
-          <path
-            d="m149.37,172.64c-26.39,0-47.86-21.47-47.86-47.87s21.47-47.86,47.86-47.86,47.86,21.47,47.86,47.86-21.47,47.87-47.86,47.87m0-93.95c-25.41,0-46.09,20.68-46.09,46.08s20.68,46.09,46.09,46.09,46.1-20.68,46.1-46.09-20.68-46.08-46.1-46.08"
-            fill="#fff"
-          />
-          <path
-            d="m185.46,127.72c-.28,8.05-1.51,32.1-36.22,45.32-34.44-12.86-36.23-37.74-36.23-45.32h72.46Z"
-            fill="#a6c8ea"
-            fill-rule="evenodd"
-          />
-          <path
-            d="m150.31,172.33l-36.62-44.27c-1.34,9.12,6.08,36.02,36.62,44.27"
-            fill="#7ab2e1"
-          />
-          <path
-            d="m124.61,127.76l33.89,40.89c3.43-1.63,5.93-3.24,8.35-5.19l-29.59-35.7h-12.64Z"
-            fill="#7ab2e1"
-          />
-          <path
-            d="m148.14,127.8l25.03,30.2c2.46-2.79,4.54-5.29,6.01-7.96l-18.41-22.23h-12.64Z"
-            fill="#7ab2e1"
-          />
-          <path
-            d="m184.86,127.81l-12.51-.03,10.51,12.68c1.78-3.94,2-10.49,2-12.65"
-            fill="#7ab2e1"
           />
         </g>
         <g id="city_light_small_blue">
@@ -69,6 +45,31 @@
             d="m196.34,124.77c0-25.93-21.03-46.96-46.97-46.96s-46.96,21.03-46.96,46.96,21.02,46.96,46.96,46.96,46.97-21.02,46.97-46.96"
             fill="#7ab2e1"
           />
+        </g>
+        <g id="city_stripes">
+          <g>
+            <path
+              d="m185.79,127.72c-.28,8.05-1.51,32.1-36.22,45.32-34.44-12.86-36.23-37.74-36.23-45.32h72.46Z"
+              fill="#a6c8ea"
+              fill-rule="evenodd"
+            />
+            <path
+              d="m150.65,172.33l-36.62-44.27c-1.34,9.12,6.08,36.02,36.62,44.27"
+              fill="#7ab2e1"
+            />
+            <path
+              d="m124.94,127.76l33.89,40.89c3.43-1.63,5.93-3.24,8.35-5.19l-29.59-35.7h-12.64Z"
+              fill="#7ab2e1"
+            />
+            <path
+              d="m148.48,127.8l25.03,30.2c2.46-2.79,4.54-5.29,6.01-7.96l-18.41-22.23h-12.64Z"
+              fill="#7ab2e1"
+            />
+            <path
+              d="m185.19,127.81l-12.51-.03,10.51,12.68c1.78-3.94,2-10.49,2-12.65"
+              fill="#7ab2e1"
+            />
+          </g>
         </g>
         <g id="city_dark_small_blue">
           <path
@@ -106,10 +107,7 @@
             fill-rule="evenodd"
           />
         </g>
-        <g
-          id="city_gold_shield_right_copy"
-          data-name="city_gold_shield_right copy"
-        >
+        <g id="city_gold_shield_right" data-name="city_gold_shield_right">
           <path
             d="m183.28,89.36s-13.58-2.91-34.06-2.91v2.06c19.31,0,32.08,2.74,32.08,2.74,0,0,3.72,15.73,2.78,34.94h-34.85v2.94h34.68c-.15,2.12-.37,4.28-.66,6.45-1.29,9.81-8.7,26.94-34.03,35.45v3.28c26.9-9.03,35.53-28.53,36.85-38.95,3.16-24.99-2.8-45.99-2.8-45.99"
             fill="#daa500"
@@ -225,11 +223,11 @@
           <circle
             cx="150"
             cy="125"
-            r="78"
+            r="79.04"
             fill="none"
             stroke="#7ab2e1"
             stroke-miterlimit="10"
-            stroke-width="2.01"
+            stroke-width="2.04"
           />
         </g>
         <g id="city_ship">
@@ -322,11 +320,15 @@
             />
           </g>
         </g>
-        <g id="name_Mask">
-          <circle cx="149.37" cy="124.78" r="50.69" fill="none" />
-        </g>
         <g id="background-2" data-name="background">
           <rect width="300" height="250" fill="none" />
+        </g>
+        <g id="start">
+          <img
+            src="images/start.jpg"
+            alt="Manchester City"
+            style="width: 300px; height: 250px"
+          />
         </g>
       </svg>
       <button id="pause" class="btn">Play</button>
