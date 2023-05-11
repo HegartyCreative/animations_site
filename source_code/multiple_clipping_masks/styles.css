@@ -1,16 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Yeseva+One&display=swap");
-
 html {
   box-sizing: border-box;
 }
 
 body {
-  font-weight: normal;
-}
-
-h1 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 *,
@@ -27,22 +23,26 @@ h1 {
   width: 300px;
   overflow: hidden;
   visibility: hidden;
-  border: 1px solid blue;
+  border: 1px solid red;
 }
 
-/* #ball1,
-#ball2,
-#mask1,
-#mask2 {
+.svg_large {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0;
   visibility: hidden;
-} */
-
-#ball1 {
-  clip-path: url(#mask1);
+  border: 1px solid red;
 }
 
-#ball2 {
-  clip-path: url(#mask2);
+/* Intro */
+
+#plane {
+  clip-path: url(#plane_mask);
+}
+#lorry {
+  clip-path: url(#lorry_mask);
 }
 
 /* Code below for the button */

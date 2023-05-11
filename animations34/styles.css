@@ -16,6 +16,7 @@ html {
   width: 300px;
   overflow: hidden;
   visibility: hidden;
+  background-color: black;
 }
 
 /* #Utd_M {
