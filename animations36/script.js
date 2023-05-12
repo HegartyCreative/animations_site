@@ -1,6 +1,9 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
 
+const start = select(".start");
+const introText = select(".introText");
+const title = select(".title");
 const map = select("#map > g");
 const intro1 = select(".intro1");
 const intro2 = select(".intro2");
@@ -19,8 +22,14 @@ const list = select("#list");
 const entering = select("#entering");
 const divider = select(".divider");
 const digital = select("#digital");
-const connected = select(".connected");
+const connectedOne = select(".connectedOne");
 const firstImage = select("#firstImage");
+const imageOne = select("#imageOne");
+const mask1 = select("#mask1");
+const connectedTwo = select(".connectedTwo");
+const imageTwo = select("#imageTwo");
+const mask2 = select("#mask2");
+const endText = select(".endText");
 
 let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
@@ -34,11 +43,34 @@ gsap.set(companies, { autoAlpha: 0 });
 gsap.set(countries, { autoAlpha: 0 });
 gsap.set(counting, { autoAlpha: 0 });
 gsap.set(entering, { autoAlpha: 0 });
-gsap.set(connected, { autoAlpha: 0 });
+gsap.set(connectedOne, { autoAlpha: 0 });
 gsap.set(firstImage, { autoAlpha: 0 });
-gsap.set(mask, { scale: 1, transformOrigin: "left center" });
+gsap.set(mask1, { scale: 1, transformOrigin: "left center" });
+gsap.set(connectedTwo, { autoAlpha: 0 });
+gsap.set(mask2, { scale: 1, transformOrigin: "right center" });
+gsap.set(secondImage, { autoAlpha: 0 });
+gsap.set(endText, { autoAlpha: 0 });
 
 // Set the elements
+
+master.to(
+  introText,
+  {
+    x: 300,
+    ease: "back.in(1)",
+    duration: 0.25,
+  },
+  "+=1"
+);
+
+master.to(
+  start,
+  {
+    x: 300,
+    duration: 0.5,
+  },
+  "-=0.15"
+);
 
 master.from(intro1, {
   x: -260,
@@ -198,7 +230,7 @@ master.to(
   {
     autoAlpha: 1,
   },
-  "+=0.5"
+  "+=0.25"
 );
 
 master.to(customers, {
@@ -317,15 +349,17 @@ master.to(
   "<"
 );
 
+// First image
+
 master.to(
-  connected,
+  connectedOne,
   {
     autoAlpha: 1,
   },
   "<"
 );
 
-master.to("#target", {
+master.to("#target1", {
   scaleY: 1.35,
   scaleX: 2.2,
   y: -10,
@@ -335,7 +369,7 @@ master.to("#target", {
 });
 
 master.to(
-  connected,
+  connectedOne,
   {
     y: -170,
     x: -20,
@@ -344,6 +378,90 @@ master.to(
     ease: "power4.out",
   },
   "<"
+);
+
+master.to(imageOne, {
+  x: -290,
+  ease: "back.in(1)",
+  duration: 0.5,
+});
+master.to(
+  connectedOne,
+  {
+    x: 270,
+    ease: "back.in(1)",
+    duration: 0.5,
+  },
+  "-=0.25"
+);
+
+// Second image
+
+master.to(
+  secondImage,
+  {
+    autoAlpha: 1,
+  },
+  "+=0.25"
+);
+
+master.to(
+  connectedTwo,
+  {
+    autoAlpha: 1,
+  },
+  ">"
+);
+
+master.to(
+  "#target2",
+  {
+    scaleY: 1.5,
+    scaleX: 2.8,
+    y: -25,
+    x: -170,
+    duration: 4,
+    ease: "power4.out",
+  },
+  ">"
+);
+
+master.to(
+  connectedTwo,
+  {
+    y: 160,
+    x: -30,
+    scale: 1.05,
+    duration: 4,
+    ease: "power4.out",
+  },
+  "<"
+);
+
+master.to(imageTwo, {
+  x: 290,
+  ease: "back.in(1)",
+  duration: 0.5,
+});
+master.to(
+  connectedTwo,
+  {
+    x: -290,
+    ease: "back.in(1)",
+    duration: 0.5,
+  },
+  "-=0.25"
+);
+
+// End
+
+master.to(
+  endText,
+  {
+    y: 20,
+    autoAlpha: 1,
+  },
+  "+=0.25"
 );
 
 // Button code

@@ -26,6 +26,25 @@ body {
   border: 1px solid lightgrey;
 }
 
+.start {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background-color: black;
+  z-index: 50;
+}
+
+.introText {
+  position: absolute;
+  top: 90px;
+  left: 80px;
+  color: white;
+  z-index: 50;
+  font-size: 2.5rem;
+}
+
 .background {
   position: absolute;
   height: 250px;
@@ -33,6 +52,14 @@ body {
   left: 0;
   top: 0;
   z-index: 10;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 250px;
 }
 
 .text {
@@ -100,7 +127,7 @@ body {
 
 #counting {
   position: absolute;
-  top: 185px;
+  top: 188px;
   left: 55px;
   font-weight: 600;
 }
@@ -147,12 +174,13 @@ body {
   color: white;
 }
 
-/* Connected */
+/* First Image */
 
-.connected {
+.connectedOne {
   text-align: left;
   font-size: 1.1rem;
   font-weight: 300;
+  line-height: 1.3rem;
   position: absolute;
   left: 40px;
   top: 195px;
@@ -167,11 +195,42 @@ body {
 }
 
 #firstImage {
-  clip-path: url(#mask);
+  clip-path: url(#mask1);
 }
 
-#mask {
-  border: 1px solid green;
+/* Second Image */
+
+.connectedTwo {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  font-weight: 300;
+  position: absolute;
+  left: 80px;
+  top: 20px;
+  z-index: 30;
+  color: white;
+  background-color: black;
+  padding: 8px;
+}
+
+#secondImage {
+  z-index: 20;
+}
+
+#secondImage {
+  clip-path: url(#mask2);
+}
+
+/* End */
+
+.endText {
+  position: absolute;
+  top: 80px;
+  left: 25px;
+  color: black;
+  z-index: 50;
+  font-size: 2.5rem;
 }
 
 /* Code below for the button */
