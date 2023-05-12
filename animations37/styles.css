@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Instrument Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  height: 250px;
+  width: 300px;
+  overflow: hidden;
+  visibility: hidden;
+  border: 1px solid lightgrey;
+}
+
+h2 {
+  z-index: 10;
+  position: absolute;
+  top: 200px;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Train */
+
+.train_text {
+  left: 122px;
+  color: #09275a;
+}
+
+#train {
+  clip-path: url(#mask);
+}
+
+/* Bus */
+
+.bus_text {
+  left: 126px;
+  color: #f37402;
+}
+
+#bus {
+  clip-path: url(#mask);
+}
+
+/* Boat */
+
+.boat_text {
+  left: 122px;
+  color: #1d9dd7;
+}
+
+#boat {
+  clip-path: url(#mask);
+}
+
+/* Taxi */
+
+.taxi_text {
+  left: 122px;
+  color: #f2b809;
+}
+
+#taxi {
+  clip-path: url(#mask);
+}
+
+/* Bike */
+
+.bike_text {
+  left: 122px;
+  color: #f34605;
+}
+
+#bike {
+  clip-path: url(#mask);
+}
+
+/* Code below for the button */
+
+.btn {
+  height: 30px;
+  width: 60px;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  left: 10px;
+  z-index: 100;
+  color: white;
+  box-shadow: none;
+  border: none;
+  font-size: 15px;
+  border: 1px solid black;
+}
+
+.btn:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+#pause {
+  left: 10px;
+  top: 260px;
+}
