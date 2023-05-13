@@ -1,6 +1,12 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
 
+const tfl_logo = select("#tfl_logo");
+const logo = select("#logo > g");
+const logo_tagline = select("#logo_tagline > g");
+const logo_line = select("#logo_line");
+const logo_circle = select("#logo_circle");
+const logo_bar = select("#logo_bar");
 const train = select("#train > path");
 const train_circle = select("#train_circle");
 const train_section = gsap.utils.toArray(".train_section");
@@ -28,6 +34,15 @@ let master = gsap.timeline({
 master.pause();
 
 gsap.set(".container", { autoAlpha: 1 });
+
+// Set the elements
+
+// Logo
+
+// gsap.set(logo, { autoAlpha: 0 });
+gsap.set(logo_line, { scale: 0, transformOrigin: "center left" });
+gsap.set(logo_circle, { scale: 0, transformOrigin: "center center" });
+gsap.set(logo_bar, { scale: 0, transformOrigin: "center center" });
 
 // Train
 gsap.set(train, { scale: 0, transformOrigin: "top center" });
@@ -65,7 +80,49 @@ gsap.set(bike_circle, {
   autoAlpha: 0,
 });
 
-// Set the elements
+// Logo animation
+
+master.to(logo_circle, {
+  scale: 1,
+  ease: "back.out(1.5)",
+});
+
+master.to(
+  logo_bar,
+  {
+    scale: 1,
+    ease: "back.out(1.5)",
+  },
+  "-=0.25"
+);
+
+master.from(logo, {
+  y: 50,
+});
+
+master.from(
+  logo_tagline,
+  {
+    y: -50,
+  },
+  "<"
+);
+
+master.to(
+  logo_line,
+  {
+    scale: 1,
+  },
+  ">"
+);
+
+master.to(
+  tfl_logo,
+  {
+    autoAlpha: 0,
+  },
+  "+=1"
+);
 
 // Train
 

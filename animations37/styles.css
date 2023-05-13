@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&display=swap");
 
+:root {
+  --tfl_red: #cc2d2c;
+  --train-color: #09275a;
+  --bus-color: #f37402;
+  --boat-color: #1d9dd7;
+  --taxi-color: #f2b809;
+  --bike-color: #f34605;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -20,9 +29,25 @@ body {
   position: relative;
   height: 250px;
   width: 300px;
-  overflow: hidden;
+  /* overflow: hidden; */
   visibility: hidden;
   border: 1px solid lightgrey;
+}
+
+#tfl_logo {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0;
+}
+
+#transport_graphics {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0;
 }
 
 h2 {
@@ -34,11 +59,19 @@ h2 {
   font-weight: 500;
 }
 
+#logo {
+  clip-path: url(#mask_top);
+}
+
+#logo_tagline {
+  clip-path: url(#mask_bottom);
+}
+
 /* Train */
 
 .train_text {
   left: 122px;
-  color: #09275a;
+  color: var(--train-color);
 }
 
 #train {
@@ -49,7 +82,7 @@ h2 {
 
 .bus_text {
   left: 126px;
-  color: #f37402;
+  color: var(--bus-color);
 }
 
 #bus {
@@ -60,7 +93,7 @@ h2 {
 
 .boat_text {
   left: 122px;
-  color: #1d9dd7;
+  color: var(--boat-color);
 }
 
 #boat {
@@ -71,7 +104,7 @@ h2 {
 
 .taxi_text {
   left: 122px;
-  color: #f2b809;
+  color: var(--taxi-color);
 }
 
 #taxi {
@@ -82,7 +115,7 @@ h2 {
 
 .bike_text {
   left: 122px;
-  color: #f34605;
+  color: var(--bike-color);
 }
 
 #bike {
