@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&display=swap");
 
 :root {
-  --tfl_red: #cc2d2c;
-  --train-color: #09275a;
+  --background: rgb(7, 7, 65);
+  --tfl_red: #ffffff;
+  --train-color: #ffffff;
+  --bus-color: #ffffff;
+  --boat-color: #ffffff;
+  --taxi-color: #ffffff;
+  --bike-color: #ffffff;
+  /* --train-color: #09275a;
   --bus-color: #f37402;
   --boat-color: #1d9dd7;
   --taxi-color: #f2b809;
-  --bike-color: #f34605;
+  --bike-color: #f34605; */
 }
 
 html {
@@ -29,9 +35,25 @@ body {
   position: relative;
   height: 250px;
   width: 300px;
-  /* overflow: hidden; */
+  overflow: hidden;
   visibility: hidden;
-  border: 1px solid lightgrey;
+  background-color: var(--background);
+}
+
+.start_logo {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0;
+}
+
+#london {
+  position: absolute;
+  height: 250px;
+  width: 560px;
+  top: 0;
+  left: 0;
 }
 
 #tfl_logo {
@@ -57,6 +79,71 @@ h2 {
   font-size: 1.6rem;
   text-align: center;
   font-weight: 500;
+}
+
+h1 {
+  z-index: 10;
+  position: absolute;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--background);
+  background-color: white;
+  padding: 6px;
+}
+
+h1.welcome_heading1 {
+  top: 20px;
+  left: 69px;
+}
+
+h1.welcome_heading2 {
+  top: 70px;
+  left: 123px;
+  z-index: 20;
+}
+
+h1.welcome_heading3 {
+  top: 120px;
+  left: 82px;
+}
+
+.text_body {
+  z-index: 20;
+  position: absolute;
+  font-size: 0.95rem;
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  line-height: 1.2rem;
+  color: white;
+  padding: 6px;
+}
+
+.text1 {
+  top: 15px;
+  left: 20px;
+  right: 30px;
+}
+
+.text2 {
+  top: 85px;
+  left: 20px;
+  right: 15px;
+}
+
+.text3 {
+  top: 15px;
+  left: 20px;
+  right: 30px;
+}
+
+.text4 {
+  top: 85px;
+  left: 20px;
+  right: 15px;
 }
 
 #logo {
