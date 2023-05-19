@@ -163,14 +163,14 @@ master.pause();
 
 master.to(start_logo, {
   opacity: 0,
-  duration: 0.25,
+  duration: 0.5,
 });
 
 master.to(
   london,
   {
     x: -260,
-    duration: 43,
+    duration: "43",
     ease: "none",
   },
   0.25
@@ -191,7 +191,7 @@ master.from(
     y: 10,
     autoAlpha: 0,
   },
-  ">"
+  "-=42"
 );
 
 master.from(
@@ -217,7 +217,7 @@ master.to(
   {
     autoAlpha: 0,
   },
-  6
+  ">1"
 );
 
 // Welcome
@@ -228,7 +228,7 @@ master.from(
     x: -270,
     ease: "back.out(1.5)",
   },
-  7
+  ">"
 );
 
 master.from(
@@ -237,7 +237,7 @@ master.from(
     x: -270,
     ease: "back.out(1.5)",
   },
-  8
+  ">"
 );
 
 master.to(
@@ -245,7 +245,7 @@ master.to(
   {
     opacity: 0,
   },
-  13
+  ">4"
 );
 
 master.from(
@@ -254,7 +254,7 @@ master.from(
     x: -270,
     ease: "back.out(1.5)",
   },
-  14
+  ">"
 );
 
 master.from(
@@ -263,7 +263,7 @@ master.from(
     x: -270,
     ease: "back.out(1.5)",
   },
-  15
+  ">"
 );
 
 master.to(
@@ -271,41 +271,41 @@ master.to(
   {
     opacity: 0,
   },
-  20
+  ">4"
 );
 
 // Train
-master.add(circleAnim(train_circle), 21);
-master.add(transportAnim(train), 21.5);
-master.add(transportTextAnim(train_text), 22);
-master.add(transportDelete(train_section), 22.5);
+master.add(circleAnim(train_circle), ">");
+master.add(transportAnim(train), ">-0.25");
+master.add(transportTextAnim(train_text), ">-0.25");
+master.add(transportDelete(train_section), ">-0.25");
 
 // Bus
-master.add(circleAnim(bus_circle), 24);
-master.add(transportAnim(bus), 24.5);
-master.add(transportTextAnim(bus_text), 25);
-master.add(transportDelete(bus_section), 25.5);
+master.add(circleAnim(bus_circle), ">");
+master.add(transportAnim(bus), ">-0.25");
+master.add(transportTextAnim(bus_text), ">-0.25");
+master.add(transportDelete(bus_section), ">-0.25");
 
 // Boat
 
-master.add(circleAnim(boat_circle), 27);
-master.add(transportAnim(boat), 27.5);
-master.add(transportTextAnim(boat_text), 28);
-master.add(transportDelete(boat_section), 28.5);
+master.add(circleAnim(boat_circle), ">");
+master.add(transportAnim(boat), ">-0.25");
+master.add(transportTextAnim(boat_text), ">-0.25");
+master.add(transportDelete(boat_section), ">-0.25");
 
 // Taxi
 
-master.add(circleAnim(taxi_circle), 30);
-master.add(transportAnim(taxi), 30.5);
-master.add(transportTextAnim(taxi_text), 31);
-master.add(transportDelete(taxi_section), 31.5);
+master.add(circleAnim(taxi_circle), ">");
+master.add(transportAnim(taxi), ">-0.25");
+master.add(transportTextAnim(taxi_text), ">-0.25");
+master.add(transportDelete(taxi_section), ">-0.25");
 
 // Bike
 
-master.add(circleAnim(bike_circle), 33);
-master.add(transportAnim(bike), 33.5);
-master.add(transportTextAnim(bike_text), 34);
-master.add(transportDelete(bike_section), 34.5);
+master.add(circleAnim(bike_circle), ">");
+master.add(transportAnim(bike), ">-0.25");
+master.add(transportTextAnim(bike_text), ">-0.25");
+master.add(transportDelete(bike_section), ">-0.25");
 
 // Logo animation
 
@@ -316,7 +316,7 @@ master
       scale: 1,
       ease: "back.out(2)",
     },
-    36
+    ">"
   )
 
   .to(
@@ -325,7 +325,7 @@ master
       scale: 1,
       ease: "back.out(2)",
     },
-    36
+    "<"
   )
 
   .from(
@@ -334,7 +334,7 @@ master
       y: 50,
       ease: "power4.out",
     },
-    36.75
+    ">-0.25"
   )
 
   .from(
@@ -343,7 +343,7 @@ master
       y: -50,
       ease: "power4.out",
     },
-    37.5
+    ">-0.25"
   )
 
   .to(
@@ -352,7 +352,7 @@ master
       scale: 1,
       ease: "power4.out",
     },
-    38
+    ">-0.25"
   );
 
 // Button code
