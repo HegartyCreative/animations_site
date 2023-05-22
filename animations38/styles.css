@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
 
+:root {
+  --bg_colour: brown;
+}
+
 html {
   box-sizing: border-box;
 }
